@@ -14,7 +14,8 @@ function populate(){
 			for(var i =0; i < choices.length; i++){
 				var element = document.getElementById("choice"+i);
 
-				element.innerHTML = choices[i];
+				//element.innerHTML = choices[i];
+				element.innerHTML = "_________";
 				guess("btn"+i, choices[i]);
 			}
 
@@ -22,11 +23,17 @@ function populate(){
 }
 
 function guess(id, guess){
+
+
 	var button = document.getElementById(id);
 	button.onclick = function(){
 		quiz.guess(guess);
 		populate();
 	}
+
+	
+
+
 }
 
 function showScores(){
